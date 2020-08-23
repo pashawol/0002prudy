@@ -1,1 +1,1 @@
-1. Отключил lazy плагин. Поставил  loading="lazy"
+<https://pashawol.github.io/0002prudy/public>
