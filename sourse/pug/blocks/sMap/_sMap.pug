@@ -1,0 +1,29 @@
+mixin sMap()
+	// start sMap
+	+b.SECTION.sMap.section#sMap&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Расположение
+				
+		+e.inner
+			.container
+				+e.caption
+					p 
+						strong Адрес коттеджного поселка: 
+						| Пушкино, Московская область, Красноармейское шоссе, 
+						| м-н Чистопрудный, КПП справа 
+						| по&nbsp;ходу движения.
+
+
+					p 17&nbsp;км от&nbsp;МКАД по&nbsp;Ярославскому шоссе, поворот на&nbsp;Красноармейское шоссе 
+					p 
+						strong Координаты:
+						| 56.011445, 37.889519 
+					p 
+						strong Отдел продаж:
+						a(href="tel:+7499391-50-99") +7&nbsp;499 391-50-99
+						br
+						a(href="mailto:dom@chisprud.ru") dom@chisprud.ru
+			+e.map-wrap
+				img(src="img/@2x/map.jpg", alt="")
+	// end sMap

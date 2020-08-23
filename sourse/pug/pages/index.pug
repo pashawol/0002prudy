@@ -3,6 +3,11 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sAdvanteges/_sAdvanteges.pug
+include ../blocks/sGal/_sGal.pug
+include ../blocks/sMap/_sMap.pug
+include ../blocks/sPlan/_sPlan.pug
+include ../blocks/sCatalog/_sCatalog.pug
 
 block variables
 	- let  mainPage= null
@@ -12,35 +17,15 @@ block title
 block pagecontent
 	+mob-mnu()
 	+header()
-
-		+top-nav()
 		+topLine()
-	.container
-		a.link-modal(href="#modal-call" data-title="title"  data-text="text  sadasdasd" data-btn="btn sdasdsa" data-order="order  ddfs") modal-call
-		a.link-modal(href="#modal-call" data-title="title  111"  data-text="text  sadasdasd" data-btn="btn sdasdsa" data-order="order  ddfs") modal-call
-		+b.tabs
-			+e.caption
-				+e.btn.btn.btn-primary.active btn 1
-				+e.btn.btn.btn-primary btn 2
-				+e.btn.btn.btn-primary btn 3
-			div
-				+e.content.active  content 1
-				+e.content content 2
-				+e.content content 3
-		+b.tabs
-			+e.caption
-				+e.btn.btn.btn-primary.active btn 1
-				+e.btn.btn.btn-primary btn 2
-				+e.btn.btn.btn-primary btn 3
-			div
-				+e.content.active  content 1
-				+e.content content 2
-				+e.content content 3
-
-		
+		+top-nav()
 	+headerBlock()
+	+sAdvanteges
+	+sGal
+	+sMap
+	+sPlan
 	+sForm()
-	+sContact()
+	+sCatalog
 	+footer()
 
 

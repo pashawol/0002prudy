@@ -1,25 +1,36 @@
 :root {
 	--animate-delay: 1.2s;
-	--fontSizeBase: #{$em-base};
+	@include media-breakpoint-up(xl) {
+
+		--fontSizeBase: #{$em-base};
+	}
+	--fontSizeBase: 14px;
 	@include media-breakpoint-up(md) {
 
-		--sPT: #{rem(80)};
-		--sPB: #{rem(90)};
-		--sTPB: #{rem(40)};
 	}
+	--sPT: #{rem(70)};
+	--sPB: #{rem(70)};
+	--sTPB: #{rem(30)};
 
-	--sPT: #{rem(80 / 2)};
-	--sPB: #{rem(90 / 2)};
-	--sTPB: #{rem(40 / 2)};
+ 
 
+		--swiperArrowSize: #{rem(97)};
+		@include media-breakpoint-up(lg) {
 
-		--swiperArrowSize: #{rem(68)};
-		--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
+			--swiperArrowPosition: 0;
+		}
+		--swiperArrowPosition: 15px;
 		--swiperBorderColorDef: var(--bs-primary);
 		--swiperColorDef: var(--bs-primary);
 		--swiperBgDef: #ffffff;
-	
+		
+		@include media-breakpoint-up(xl) {
+			
+			--mbitem: #{rem(65)};
+		}
+		--mbitem: #{rem(30)};
 }
+
 
 @include media-breakpoint-up(xl) {}
 

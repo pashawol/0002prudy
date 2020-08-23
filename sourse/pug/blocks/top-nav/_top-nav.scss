@@ -1,33 +1,32 @@
 .top-nav {
-	padding-top: 15px;
-	// position: absolute;
-	top: 100%;
-	// @include clearfix;ss
-	z-index: 20;
-	padding-top: 3px;
-	@include mt;
-	padding-bottom: 10px;
-	top: 0;
-	left: 0;
-	width: 100%;
+	 &__logo{
+		 display: inline-flex;
+		 align-items: center;
+		 @extend .text-body;
+		 .icon{
+			 font-size: rem(26); 
+			 margin-right: rem(13);
+			 color: $primary;
+		 }
+		 	@include media-breakpoint-up(sm) {
 
-	&.fixed {
-		width: 100vw;
-		bottom: auto;
-		margin-top: 0;
-		background-color: #fff;
-	}
-
-	&__nav {
-		text-align: center;
-		list-style-type: none;
-	}
-
-	&__item {
-		display: inline-block;
-		list-style-type: none;
-	}
-
+				 font-size: rem(28);
+				}
+				font-size: rem(20);
+		//  font-family: Montserrat;
+		@extend .mono;
+		text-transform: uppercase;
+		letter-spacing: .12px;
+		font-weight: bold;
+	 }
+	 .row{
+		 align-items: center;
+	 }
+	 	@include media-breakpoint-up(lg){ 
+			 padding-top: rem(30); 
+			}
+			padding-top: rem(14);
+			padding-bottom: rem(14);
 	// 
 	@include media-breakpoint-up(xl) {}
 
@@ -63,4 +62,25 @@
 	@include media-breakpoint-down(sm) {}
 
 	@include media-breakpoint-down(xs) {}
+}
+.navMenu{
+	@include media-breakpoint-up(xl){
+		
+			@include roww(rem(42));
+		}
+		@include media-breakpoint-up(lg) {
+			
+			display: flex;
+			align-items: center;
+				@include roww(rem(22));
+				list-style: none;
+				margin-bottom: 0;
+				justify-content: flex-end;
+			}
+	&__link{
+		text-transform: uppercase;
+		font-weight: 300;
+		@extend .text-body;
+		font-weight: bold;
+	}
 }

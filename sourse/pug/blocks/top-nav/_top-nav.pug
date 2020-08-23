@@ -8,20 +8,29 @@ mixin mob-mnu()
 		//- request.responseType = 'json';
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
-	+b.toggle-menu-mobile--js.d-lg-none
-		span
+	
 	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
 		
 			+mnu()
-			.text-right
+			a.btn.btn-primary.ml-3(href="#") Перезвоните мне
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			+mnu()
+			.row
+				.col-lg-auto.col
+					+e.logo(href="/")
+						+icon("logo")
+						+e.text  чистые пруды 3
+				.col.d-none.d-lg-block
+
+					+mnu()
+				.col-auto.d-lg-none
+					+b.toggle-menu-mobile--js.d-lg-none
+						span
 					
 	// end top-nav

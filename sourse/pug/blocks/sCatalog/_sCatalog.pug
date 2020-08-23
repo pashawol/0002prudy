@@ -1,0 +1,34 @@
+mixin sCatalog()
+	// start sCatalog
+	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Проекты домов
+			+e.text-top Вашему вниманию предлагается на&nbsp;выбор более 25&nbsp;различных проектов кирпичных жилых домов площадью от&nbsp;70&nbsp;кв.м.&nbsp;на&nbsp;земельных участках от&nbsp;10&nbsp;соток. Проекты в&nbsp;коттеджном поселке &laquo;Чистые пруды&nbsp;3&raquo; полностью соответствуют всем выдвигаемым по&nbsp;отношению к&nbsp;современным загородным домам требованиям и&nbsp;созданы для счастливой жизни своих владельцев.
+			+e.slider--wrap
+				+e.slider--js.swiper-container
+					.swiper-wrapper
+						mixin item(i,t)
+							+e.slide.swiper-slide
+								+e.item
+									+e.A.img-wrap(href="#")
+										img.res-i.swiper-lazy(src="#" data-src=`img/@2x/project-${i}.jpg`, alt="")
+									+e.caption
+										+e.title= t
+										block
+						+item("1",'проект Б-4')
+							+e.text Общая площадь - 174 м2
+								br
+								| Этежей - 2, Спален - 3, Санузлов - 3
+						+item("2",'проект д-3')
+							+e.text Общая площадь - 143 м2
+
+								br
+								| Этежей - 2, Спален - 3, Санузлов - 3
+						+item("3",'проект Б-4')
+							+e.text Общая площадь - 174 м2
+								br
+								| Этежей - 2, Спален - 3, Санузлов - 3
+				+arrow2
+
+	// end sCatalog

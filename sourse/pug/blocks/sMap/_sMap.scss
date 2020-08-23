@@ -1,0 +1,91 @@
+
+	// start .sMap
+	.sMap {
+		padding-top: 0;
+		--sTPB: #{rem(20)};
+		&__inner{
+			position: relative;
+		}
+		&__map-wrap{
+				@include media-breakpoint-up(md) {
+
+					position: absolute;
+					height: 100%;
+				}
+				position: relative;
+				height: 400px;
+			left: 0;
+			top: 0;
+			width: 100%;
+			> img{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		&__caption{
+			position: relative;
+			@include media-breakpoint-up(md){
+
+				width: 50%;
+				min-height: 100%;
+				padding: rem(100) 0 rem(70);
+			}
+			padding: rem(30) 0 1px;
+			z-index: 2;
+			color: #ffffff;
+			p{
+				max-width: rem(340);
+				margin-left: auto;
+				margin-right: auto;
+				font-size: $h6-font-size;
+				@include media-breakpoint-up(md){
+
+					margin-bottom: rem(60);
+				}
+				margin-bottom: rem(30);
+				a{
+					color: #ffffff !important;
+				}
+				strong{
+					display: block;
+				}
+			}
+			&::before{
+				content: '';
+				position: absolute;
+					@include media-breakpoint-up(md){
+
+						right: 0;
+					}
+					right: -100px;
+				top: 0;
+				height: 100%;
+				width: 200vw;
+				z-index: -1;
+				background-color: rgba($color: $dark, $alpha: .83);
+			}
+		}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+
+} // end.sMap

@@ -1,4 +1,33 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			h2 footer
+			.row
+				.col-lg-10.col
+					+e.logo(href="/")
+							+icon("logo")
+							+e.text  чистые пруды 3
+					.row
+						.col-lg
+							.h6 &laquo;Чистые пруды&nbsp;3&raquo; от&nbsp;ООО &laquo;Корпорация &laquo;ВИТ&raquo;&nbsp;&mdash; одно из&nbsp;самых качественных предложений на&nbsp;рынке загородного жилья Подмосковья. Среди наших завершеных проектов коттеджные поселки: &laquo;Любимовка&raquo;, &laquo;Чистые пруды&raquo; и&nbsp;&laquo;Чистые пруды&nbsp;2&raquo;.
+						.col-xl-4.col-auto
+							+e.link(href="tel:+7499391-50-99")
+								+e.icon-wrap
+									img(src="img/@2x/tel-white.png" , loading="lazy" alt="")
+								| +7 499 391-50-99 
+							br
+							
+							+e.link(href="mailto:dom@chisprud.ru ")
+								+e.icon-wrap
+									img(src="img/@2x/email.png" , loading="lazy" alt="")
+								| dom@chisprud.ru 
+							br
+							+e.link(href="chisprud.ru")
+								+e.icon-wrap
+									img(src="img/@2x/internet.png" , loading="lazy" alt="")
+								| chisprud.ru
+						.col-xl-3.col-auto
+							+e.btn(href="#") Перезвоните мне
+							+soc()
+				.col-lg-2.col-sm-auto
+					+mnu
+			div ©  ООО “Корпорация ВИТ”, 2020 г

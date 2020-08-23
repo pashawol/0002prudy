@@ -1,9 +1,12 @@
 mixin topLine()
 	// start topLine
-	+b.SECTION.topLine.section#topLine&attributes(attributes)
+	+b.topLine&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 topLine
-				
 			.row
+				.col
+					+e.title Продажа участков от собственника
+				.col-auto
+					+e.tel(href="tel:+7499391-50-99") +7 499 391-50-99 
+				.col-auto.d-none.d-sm-block
+					+e.btn(href="#") Перезвоните мне
 	// end topLine

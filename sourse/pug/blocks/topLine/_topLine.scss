@@ -1,7 +1,53 @@
 
 	// start .topLine
 	.topLine {
-		 
+		border-bottom: 1px solid rgba($color: #afb0af, $alpha: .3);
+		font-weight: 500;
+			@include media-breakpoint-up(lg) {
+
+				padding: rem(15) 0 rem(10);
+			}
+			padding: rem(10) 0;
+		.row{
+			align-items: center;
+		}
+		 &__title{
+			//  font-size: rem(21);
+			 	@include media-breakpoint-up(sm){
+
+					 @include rfs(rem(21));
+					}
+			text-transform: uppercase;
+		}
+		&__tel{
+				@include media-breakpoint-up(lg) {
+
+					font-size: rem(20);
+				}
+			// @include rfs(rem(20));
+			@extend .text-body;
+			display: inline-flex;
+			align-items: center;
+			font-size: 0;
+			&::before{
+				content: url(../img/@2x/tel.png);
+					@include media-breakpoint-up(lg){
+
+						margin-right: 10px;
+					}
+				// display: block;
+				display: inline-block;
+				height: 23px;
+			} 
+		 }
+		 &__btn{
+			 @extend .btn;
+			 @extend .btn-primary;
+			 	@include media-breakpoint-up(lg){
+
+					 width: rem(200);
+				 }
+		 }
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

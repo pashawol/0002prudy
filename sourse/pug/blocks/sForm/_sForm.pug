@@ -2,8 +2,18 @@ mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			.row
+			+e.inner
+				.row
+					.col-sm-auto
+						+form-wrap
+							+e.title-top Отправить заявку
+							+e.text-top Чтобы получить подробную консультацию по&nbsp;подбору участка, отправьте нам свои контакты. Мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время.
+							+input('Введите Ваше имя')
+							+input('Введите e-mail','email')
+							+input('Введите номер телефона','tel')
+							+e.btn.btn-warning.btn-block(type="submit") Отправить заявку
+							+polite
+					+e.col.col
+						+pic("form-img",'bg')(class="picture-bg")
+					
 	// end sForm

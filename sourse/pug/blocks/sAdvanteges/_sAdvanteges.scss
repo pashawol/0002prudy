@@ -1,0 +1,105 @@
+
+	// start .sAdvanteges
+	.sAdvanteges {
+	--sPB: 0;
+		h2{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 900px;
+			text-align: center;
+		}
+		&__item{ 
+			position: relative;
+			z-index: 2;
+			display: flex;
+			flex-direction: column;
+			min-height: calc(100% - var(--mbitem));
+			margin-bottom: var(--mbitem);
+			&::before{
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: -1;
+				background-color: #e8e8e8;
+				opacity: 0.55;
+					@include media-breakpoint-up(xl){
+
+						width: calc(100% - #{rem(47)});
+					}
+					width: calc(100% - #{rem(24)});
+				height: calc(100% - #{rem(84)});
+			}
+		}
+		&__head{
+			display: flex;
+			align-items: center;
+				@include media-breakpoint-up(lg){
+
+					padding: rem(20) rem(30) rem(18);
+				}
+				padding: rem(15) rem(15);
+		}
+		&__title{
+			max-width: rem(180);
+			font-weight: 900;
+			font-size: $h6-font-size; 
+			line-height: 28px;
+			text-transform: uppercase;
+			color: $primary;
+		}
+		&__img-wrap{
+			width: 70px;
+			height: 60px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-right: 10px;
+			img{
+				flex: 0 0 auto;
+				max-width: 100%;
+				max-height: 100%;
+
+			}
+		}
+		&__body{
+		 flex-grow: 1;
+			box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.11);
+			background-color: #ffffff;
+			@include media-breakpoint-up(xl) {
+
+				margin-left: rem(44);
+			}
+			margin-left: rem(24);
+				@include media-breakpoint-up(lg){
+
+					padding: rem(26) rem(30);
+				}
+				padding: rem(26) rem(15);
+				@include media-breakpoint-up(xl) {
+					padding-bottom: rem(56);
+				}
+		}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+
+} // end.sAdvanteges
