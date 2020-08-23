@@ -3,10 +3,10 @@ mixin headerBlock()
 	+b.headerBlock&attributes(attributes)
 		+e.video-block.video-background
 			+e.wrap 
-				<video class="fillItUp video" id="bgvid" poster="img/header-bg.jpg" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-					<source src="video/video.mp4" type="video/mp4"/>
-					<source src="video/video.ogv" type="video/ogv"/>
-					<source src="video/video.webm" type="video/webm"/>
+				<video class="fillItUp video" id="bgvid" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+					<source src="video/video.mp4" loading="lazy" type="video/mp4"/>
+					<source src="video/video.ogv" loading="lazy" type="video/ogv"/>
+					<source src="video/video.webm" loading="lazy" type="video/webm"/>
 				</video>
 				+e.text-block 
 					.container
