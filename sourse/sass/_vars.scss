@@ -919,7 +919,7 @@ $form-feedback-tooltip-border-radius: $tooltip-border-radius !default;
 
 // Popovers
 
-$popover-font-size: $font-size-sm !default;
+$popover-font-size: $font-size-base !default;
 $popover-bg: $white !default;
 $popover-max-width: 276px !default;
 $popover-border-width: $border-width !default;
@@ -928,8 +928,8 @@ $popover-border-radius: $border-radius-lg !default;
 $popover-inner-border-radius: subtract($popover-border-radius, $popover-border-width) !default;
 $popover-box-shadow: $box-shadow !default;
 
-$popover-header-bg: darken($popover-bg, 3%) !default;
-$popover-header-color: $headings-color !default;
+$popover-header-bg: #72b742 !default;
+$popover-header-color: #fff !default;
 $popover-header-padding-y: .5rem !default;
 $popover-header-padding-x: $spacer !default;
 

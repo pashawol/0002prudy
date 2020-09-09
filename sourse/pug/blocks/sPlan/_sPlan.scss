@@ -23,4 +23,75 @@
 	@include media-breakpoint-down(md) {}
 	@include media-breakpoint-down(sm) {}
 
+	polygon{
+		cursor: pointer;
+		@include mt;
+		
+	}
+	.st16{
+		&:hover{
+				stroke:#55843e !important;
+				fill: #486d2f !important;
+				opacity: 0.67;
+		}
+	}
+	.st0,
+	.st18{
+		// pointer-events: none;
+		cursor: default;
+	}
+
 } // end.sPlan
+
+
+
+	.popover-toggle {
+		position: relative;
+
+		.path {
+			cursor: pointer;
+		}
+
+		&.active,
+		&:hover {
+			.path {
+
+				fill: #e2e2e2;
+			}
+		}
+
+		circle {
+			position: absolute;
+			@include a-cent;
+		}
+
+		.active {
+			path {
+				fill: #e2e2e2;
+			}
+		}
+	}
+
+	.popover-body {
+		padding-left: 20px;
+		padding-right: 20px;
+		font-size: 12px;
+		padding-bottom: 10px;
+
+		.row {
+			align-items: center;
+		}
+
+		img {
+			max-width: 25px;
+		}
+	}
+
+	.popover-text {
+		padding-top: 10px;
+	}
+
+	.bs-popover-auto[x-placement^=right],
+	.bs-popover-right {
+		margin-left: 0;
+	}
