@@ -31,8 +31,7 @@ mixin sProdCardCharItem(key, val)
 		b=key + ' '
 		span=val
 
-
 mixin sProdCardSlide()
 	.swiper-slide
-		+e.img(href="#" data-fancybox='sProdCard')
+		+e.img(href=`img/@2x/sProdCard.jpg` data-fancybox='sProdCard')
 			img(loading="lazy" src=`img/@2x/sProdCard.jpg` alt="")
