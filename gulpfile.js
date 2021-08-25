@@ -16,7 +16,7 @@ global.$ = {
 	postcss: require('gulp-postcss'),
 	autoprefixer: require('autoprefixer'),
 	flexGapPolyfill: require('flex-gap-polyfill'),
-	postcssPresetEnv: require('postcss-preset-env'),
+	//postcssPresetEnv: require('postcss-preset-env'),
 	cssnano: require('cssnano'),
 	nested: require('postcss-nested'),
 	plumber: require('gulp-plumber'), 

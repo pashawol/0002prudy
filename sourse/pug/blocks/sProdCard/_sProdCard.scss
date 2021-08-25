@@ -1,0 +1,156 @@
+// start .sProdCard
+.sProdCard {
+	--sPT: 0;
+
+	--sTPB: #{rem(60)};
+	--sPB: #{rem(40)};
+	@include media-breakpoint-up(xl){
+		--sPB: #{rem(120)};
+		--sTPB: #{rem(90)};
+	}
+
+	.section-title{
+		margin-bottom: var(--sTPB);
+
+		color: $white;
+		position: relative;
+		z-index: 1;
+
+		padding: rem(24) 0;
+		@include media-breakpoint-up(xl){
+			padding: rem(35) rem(28) rem(25);
+		}
+
+		&:before,
+		&:after{
+			content: '';
+			position: absolute;
+			z-index: -1;
+		}
+		&:before{
+			right: calc(-1 * (100vw - 100%) / 2);
+			width: calc(100vw - (100vw - 100%) / 2);
+			height: 100%;
+			background: $dark;
+
+			top: rem(20);
+			@include media-breakpoint-up(xl){
+				top: rem(28);
+			}
+		}
+		&:after{
+			left: calc(-1 * (100vw - 100%) / 2);
+			width: calc(100vw - (100vw - 100%) / 2);
+
+			@include media-breakpoint-up(xl){
+				width: calc(100vw - (89vw - 100%) / 2);
+			}
+			height: 100%;
+			background: $primary;
+
+			top: 0;
+		}
+
+		h1, h2{
+			color: $white;
+			font-size: rem(38);
+			font-weight: 900;
+			line-height: calc(52/38);
+		}
+	}
+	&__row{
+		--bs-gutter-x: #{rem(40)};
+		--bs-gutter-y: #{rem(60)};
+	}
+	&__left-col{
+		@include media-breakpoint-up(xl){
+			width: 57.5%!important;
+		}
+	}
+	&__slider-wrap{
+		position: relative;
+
+		@include media-breakpoint-up(lg){
+			margin: 0;
+			padding: 0 rem(28);
+		}
+
+		.swiper-container{}
+		.swiper-wrapper{}
+		.swiper-slide{
+			height: auto;
+		}
+	}
+
+	//prev, next
+	.swiper-button-hand{
+		@include media-breakpoint-down(lg){
+			display: none;
+		}
+		.icon{
+			font-size: rem(58);
+		}
+		&-prev{
+			justify-content: flex-start;
+		}
+		&-next{
+			justify-content: flex-end;
+		}
+	}
+
+	//
+	&__img{
+		@extend .accept-ratio-frame;
+		padding-top: calc(357/635 * 100%);
+	}
+	//
+	&__chars{
+		font-size: rem(18);
+		line-height: calc(24/18);
+		font-weight: 300;
+
+		b{
+			font-weight: 500;
+		}
+
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(xl){
+			margin-bottom: rem(48);
+		}
+	}
+	&__char{
+		margin-bottom: rem(11);
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__descr{
+		@include media-breakpoint-up(xl){
+			padding-right: rem(22);
+		}
+		font-family: $mono2;
+		font-size: rem(18);
+		line-height: calc(24/18);
+
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+
+		p{
+			margin-bottom: rem(10);
+		}
+		a{
+			display: block;
+			color: $primary;
+			text-decoration: underline;
+			&:hover{
+				text-decoration: none;
+			}
+
+			margin-bottom: rem(10);
+		}
+	}
+
+	&__{}
+	&__{}
+} // end.sProdCard

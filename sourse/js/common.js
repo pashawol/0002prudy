@@ -132,7 +132,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 	var x = window.location.host;
 	let screenName;
-	screenName = 'main.jpg';
+	screenName = '01.png';
 	if (screenName && x === "localhost:3000") {
 		$(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -226,7 +226,27 @@ function eventHandler() {
 			placement: 'auto',
 		})
 	})
- 
+	//luckyoneJs
+
+	let sProdCard = new Swiper('.sProdCard-slider-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 30,
+		loop: true,
+
+		navigation: {
+			nextEl: '.sProdCard .swiper-button-next',
+			prevEl: '.sProdCard .swiper-button-prev',
+		},
+
+		pagination: {
+			el: '.sProdCard .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
+
+	//end luckyoneJs
+
 
 };
 if (document.readyState !== 'loading') {

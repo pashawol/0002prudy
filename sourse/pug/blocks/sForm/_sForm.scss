@@ -1,81 +1,69 @@
+// start .sForm
+.sForm {
+  @include media-breakpoint-up(sm) {
 
-	// start .sForm
-	.sForm {
-		@include media-breakpoint-up(sm) {
+    --w: #{rem(615)};
+  }
+  --w: 100%;
+  position: relative;
+  z-index: 2;
+  padding-bottom: 0;
 
-			--w: #{rem(615)};
-		}
-		--w: 100%;
-		position: relative;
-		z-index: 2;
-		padding-bottom: 0;
-		&::before{
-			content: '';
-			width: 100%;
-			right: 238px;
-			height: calc(100% - #{rem(76)});
-			z-index: -1;
-			position: absolute;
-			background-color: $primary;
-			top: 0;
-		}
-		.form-wrap{
-			 
-				width: var(--w);
-			position: relative;
-			z-index: 2;
-			@include media-breakpoint-up(sm){
+  &::before {
+    content: '';
+    width: 100%;
+    right: 238px;
+    height: calc(100% - #{rem(76)});
+    z-index: -1;
+    position: absolute;
+    background-color: $primary;
+    top: 0;
+  }
 
-				padding: rem(40) rem(50);
-			}
-			padding: rem(40) rem(20);
-			form{
-				margin-left: auto;
-				margin-right: auto;
-				max-width: rem(430);
-			}
-			&::before{
-				content: '';
-				position: absolute;
-				left: 0;
-				top: 0;
-				width: 200vw;
-				height: 100%;
-				z-index: -1;
-				background-color: $dark;
-			}
-		}
-		&__col{
-			position: relative;
-			z-index: 2;
-			picture{
-				left: -15px;
-				width: calc(15px + 100% + (100vw - var(--w) - 100%) / 2);
-			}
-		}
-		 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-up(xs) {}
-	
-	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
-	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+  .form-wrap {
 
-} // end.sForm
+    width: var(--w);
+    position: relative;
+    z-index: 2;
+    @include media-breakpoint-up(sm) {
+
+      padding: rem(40) rem(50);
+    }
+    padding: rem(40) rem(20);
+
+    form {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: rem(430);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 200vw;
+      height: 100%;
+      z-index: -1;
+      background-color: $dark;
+    }
+  }
+
+  &__col {
+    position: relative;
+    z-index: 2;
+
+    picture {
+      left: -15px;
+      width: calc(15px + 100% + (100vw - var(--w) - 100%) / 2);
+
+			background: $black;
+			img{
+				opacity: .6;
+			}
+    }
+  }
+}
+
+// end.sForm
+

@@ -1,0 +1,38 @@
+mixin sProdCard()
+	// start sProdCard
+	+b.SECTION.sProdCard.section#sProdCard&attributes(attributes)
+		.container
+			+b.section-title
+				h1 Серия В-7
+			+e.row.row
+				+e.left-col.col-lg-6
+					+e.slider-wrap
+						.swiper-container.sProdCard-slider-js
+							.swiper-wrapper
+								-for(var i = 0; i < 3; i++)
+									+sProdCardSlide()
+						+arrow()
+						.swiper-pagination.py-3.d-lg-none
+				.col-lg-6.col-xl
+					+e.chars
+						+sProdCardCharItem('Площадь дома, кв.м.:', '203')
+						+sProdCardCharItem('Этажей:', '2 (второй свет)')
+						+sProdCardCharItem('Кол-во спален:', '4')
+						+sProdCardCharItem('Кол-во санузлов:', '2')
+						+sProdCardCharItem('Длина фасада, м:', '16,65')
+					+e.descr
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+						a(href="#") Скачать проект дома сери В-7
+						a(href="#sCatalog") Посмотреть все проекты домов
+
+	// end sProdCard
+mixin sProdCardCharItem(key, val)
+	+e.char
+		b=key + ' '
+		span=val
+
+
+mixin sProdCardSlide()
+	.swiper-slide
+		+e.img(href="#" data-fancybox='sProdCard')
+			img(loading="lazy" src=`img/@2x/sProdCard.jpg` alt="")

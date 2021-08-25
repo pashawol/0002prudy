@@ -1,6 +1,6 @@
 "use strict";
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -144,7 +144,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = 'main.jpg';
+	screenName = '01.png';
 
 	if (screenName && x === "localhost:3000") {
 		$(".main-wrapper").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -215,7 +215,22 @@ function eventHandler() {
 			trigger: 'focus',
 			placement: 'auto'
 		});
-	});
+	}); //luckyoneJs
+
+	var sProdCard = new Swiper('.sProdCard-slider-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 30,
+		loop: true,
+		navigation: {
+			nextEl: '.sProdCard .swiper-button-next',
+			prevEl: '.sProdCard .swiper-button-prev'
+		},
+		pagination: {
+			el: '.sProdCard .swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		}
+	}); //end luckyoneJs
 }
 
 ;

@@ -1,5 +1,6 @@
 $default-font: "MuseoSansCyrl";
 $mono: Montserrat;
+$mono2: Montserrat;
 // $file-form: ($file-formats: woff2 woff ttf);
 $addr: '../fonts/';
 $file-format: woff2;
@@ -9,7 +10,10 @@ $file-format: woff2;
 @include font-face ($default-font, $addr + "MuseoSansCyrl-500", 500, $file-formats: $file-format);
 @include font-face ($default-font, $addr + "MuseoSansCyrl-700", 700, $file-formats: $file-format);
 @include font-face ($default-font, $addr + "MuseoSansCyrl-900", 900, $file-formats: $file-format);
+//-
 @include font-face ($mono, $addr + "Montserrat-Bold", 700, $file-formats: $file-format);
+//-
+@include font-face ($mono2, $addr + "MyriadPro-Regular", 400, $file-formats: $file-format);
 
 // font-weight helper:
 
